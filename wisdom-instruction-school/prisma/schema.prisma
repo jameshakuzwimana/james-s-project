@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  STAFF
+  PARENT
+  APPLICANT
+}
+
+enum ApplicationStatus {
+  PENDING
+  UNDER_REVIEW
+  SHORTLISTED
+  ACCEPTED
+  REJECTED
+  WAITLISTED
+}
+
+enum GradeLevel {
+  NURSERY_1
+  NURSERY_2
+  NURSERY_3
+  P1
+  P2
+  P3
+  P4
+  P5
+  P6
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      Role     @default(PARENT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  applications Application[]
+
+  @@map("users")
+}
+
+model Application {
+  id             String            @id @default(cuid())
+  applicationNo  String            @unique
+  status         ApplicationStatus @default(PENDING)
+  gradeLevel     GradeLevel
+
+  childFirstName   String
+  childLastName    String
+  childGender      String
+  childDob         DateTime
+  previousSchool   String?
+  medicalNotes     String?
+
+  parentFirstName  String
+  parentLastName   String
+  parentRelation   String
+  parentEmail      String
+  parentPhone      String
+  parentAddress    String
+  occupation       String?
+
+  submittedById    String?
+  submittedBy      User?             @relation(fields: [submittedById], references: [id])
+
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  @@index([status])
+  @@index([parentEmail])
+  @@map("applications")
+}

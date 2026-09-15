@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D5E2C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#073D1C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A843;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)" />
+  <circle cx="400" cy="280" r="150" fill="none" stroke="#D4A843" stroke-width="2" opacity="0.6"/>
+  <circle cx="400" cy="280" r="100" fill="none" stroke="#D4A843" stroke-width="2" opacity="0.4"/>
+  <!-- Graduation cap -->
+  <rect x="340" y="270" width="120" height="80" rx="10" fill="#D4A843" opacity="0.9"/>
+  <rect x="340" y="255" width="120" height="25" rx="8" fill="#fbbf24" opacity="0.8"/>
+  <line x1="370" y1="350" x2="370" y2="390" stroke="#D4A843" stroke-width="4" opacity="0.8"/>
+  <line x1="430" y1="350" x2="430" y2="390" stroke="#D4A843" stroke-width="4" opacity="0.8"/>
+  <rect x="355" y="390" width="90" height="15" rx="5" fill="#D4A843" opacity="0.7"/>
+  <!-- Tassel -->
+  <circle cx="460" cy="265" r="8" fill="#fbbf24" opacity="0.9"/>
+  <line x1="460" y1="265" x2="490" y2="300" stroke="#fbbf24" stroke-width="3" opacity="0.8"/>
+  <circle cx="490" cy="305" r="6" fill="#fbbf24" opacity="0.9"/>
+  <!-- Text -->
+  <text x="400" y="460" text-anchor="middle" fill="#ffffff" font-family="Georgia, serif" font-size="42" font-weight="bold">Wisdom Instruction School</text>
+  <text x="400" y="505" text-anchor="middle" fill="#D4A843" font-family="Georgia, serif" font-size="22" letter-spacing="4">NURSERY &amp; PRIMARY SCHOOL</text>
+  <text x="400" y="545" text-anchor="middle" fill="#ffffff" opacity="0.7" font-family="sans-serif" font-size="16">Placeholder Image - Rwanda</text>
+</svg>

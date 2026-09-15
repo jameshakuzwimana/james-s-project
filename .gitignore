@@ -1,0 +1,21 @@
+# Node.js runtime and installers (kept on disk, not in repo)
+/node20/
+node-v20.msi
+node20.zip
+package-lock.json
+
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+out/
+build/
+
+# Logs / build artifacts
+*.log
+*.err
+*.tsbuildinfo
+
+# Env files
+.env*
