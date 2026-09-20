@@ -94,7 +94,7 @@ export default function GalleryPage() {
               <Camera className="mb-4 h-12 w-12 text-gray-300" />
               <h3 className="font-semibold text-gray-700">No images found</h3>
               <p className="text-sm text-gray-500">
-                Try adjusting your search or filter to find what you're looking for.
+                Try adjusting your search or filter to find what you&apos;re looking for.
               </p>
             </div>
           ) : (

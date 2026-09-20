@@ -43,7 +43,7 @@ function SchoolLifeHero() {
             Life at Wisdom Instruction School
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-            School is more than lessons — it's a vibrant community of discovery, friendship,
+             School is more than lessons — it&apos;s a vibrant community of discovery, friendship,
             creativity, and growth.
           </p>
         </FadeIn>

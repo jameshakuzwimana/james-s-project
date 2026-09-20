@@ -325,7 +325,7 @@ function ExaminationSection() {
               <p>
                 Student progress is assessed through a combination of continuous assessment,
                 classwork, homework, projects, and formal examinations. This balanced approach
-                gives a complete picture of each child's development and ensures no student is left
+                gives a complete picture of each child&apos;s development and ensures no student is left
                 behind.
               </p>
               <p>

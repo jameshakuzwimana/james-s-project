@@ -44,7 +44,7 @@ function AdmissionsHero() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
             We are delighted that you are considering Wisdom Instruction School for your child.
-            Here you'll find everything you need to know about joining our school community.
+             Here you&apos;ll find everything you need to know about joining our school community.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link

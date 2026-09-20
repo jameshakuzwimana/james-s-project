@@ -37,7 +37,7 @@ function TeachersHero() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
             Our dedicated and passionate teachers are the heart of Wisdom Instruction School,
-            committed to every child's success and well-being.
+             committed to every child&apos;s success and well-being.
           </p>
         </FadeIn>
       </div>
@@ -135,7 +135,7 @@ function JoinUsSection() {
               Interested in Teaching With Us?
             </h2>
             <p className="mx-auto mb-8 max-w-2xl text-white/80">
-              We're always looking for passionate educators who share our commitment to excellence
+               We&apos;re always looking for passionate educators who share our commitment to excellence
               and care for every child.
             </p>
             <div className="mx-auto mb-8 grid max-w-lg gap-3 text-left">

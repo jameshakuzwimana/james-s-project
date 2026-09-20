@@ -32,10 +32,12 @@ export function MainNav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
     setIsOpen(false);
     setOpenDropdown(null);
-  }, [pathname]);
+  }
 
   const handleMouseEnter = (name: string) => {
     if (window.innerWidth >= 1024) {

@@ -726,7 +726,7 @@ function TestimonialsSection() {
                   ))}
                 </div>
                 <p className="mb-6 flex-1 text-sm leading-relaxed text-white/90">
-                  "{testimonial.content}"
+                  &ldquo;{testimonial.content}&rdquo;
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-400 font-bold text-charcoal-dark">
@@ -758,7 +758,7 @@ function AdmissionsCTA() {
                 Admissions Open
               </span>
               <h2 className="font-serif text-3xl font-bold text-white md:text-4xl">
-                Begin Your Child's Journey With Us
+                 Begin Your Child&apos;s Journey With Us
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-white/80">
                 Applications for the upcoming academic year are now open. Give your child the gift

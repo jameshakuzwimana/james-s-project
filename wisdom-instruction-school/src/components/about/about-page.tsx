@@ -79,7 +79,7 @@ function HistorySection() {
                 nursery and primary students.
               </p>
               <p>
-                The name "Wisdom Instruction" reflects our belief that true education goes beyond
+                The name &quot;Wisdom Instruction&quot; reflects our belief that true education goes beyond
                 academic knowledge — it fosters wisdom, character, critical thinking, and a deep
                 love for learning that lasts a lifetime.
               </p>
@@ -229,14 +229,14 @@ function PrincipalMessage() {
             </div>
             <blockquote className="space-y-4 text-lg leading-relaxed text-white/90">
               <p>
-                "Welcome to Wisdom Instruction School — a place where every child is known, valued,
+                &quot;Welcome to Wisdom Instruction School — a place where every child is known, valued,
                 and inspired to grow. We believe that education is not just about what children
                 learn, but about who they become.
               </p>
               <p>
                 Our dedicated team works tirelessly to create a warm, safe, and challenging
-                environment where curiosity is encouraged, effort is celebrated, and every child's
-                unique gifts are nurtured."
+                environment where curiosity is encouraged, effort is celebrated, and every child&apos;s
+                unique gifts are nurtured.&quot;
               </p>
             </blockquote>
             <div className="mt-6 border-t border-white/20 pt-4">
