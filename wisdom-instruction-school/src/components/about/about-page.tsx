@@ -63,7 +63,7 @@ function HistorySection() {
           <FadeIn direction="left">
             <div className="overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/images/school/school-building.svg"
+                src="/images/photos/school-campus.jpg"
                 alt="Wisdom Instruction School building"
                 className="aspect-[4/3] w-full object-cover"
               />
@@ -263,7 +263,7 @@ function EnvironmentSection() {
         </FadeIn>
         <div className="grid gap-6 md:grid-cols-3">
           {[
-            { title: "Safe & Secure Campus", image: "/images/school/school-building.svg", description: "A welcoming campus where children are protected and cared for." },
+            { title: "Safe & Secure Campus", image: "/images/photos/school-building.jpg", description: "A welcoming campus where children are protected and cared for." },
             { title: "Happy Classrooms", image: "/images/school/classroom.svg", description: "Bright, colorful spaces that inspire curiosity and creativity." },
             { title: "Outdoor Play Areas", image: "/images/school/playground.svg", description: "Safe outdoor spaces for physical activity, play, and exploration." },
           ].map((item, index) => (

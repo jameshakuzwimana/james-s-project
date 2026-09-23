@@ -16,7 +16,9 @@ import {
 } from "lucide-react";
 import FadeIn from "@/components/shared/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { toast } from "@/components/ui/toast";
+import { siteConfig } from "@/config/site";
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -75,6 +77,19 @@ export default function ContactPage() {
             <FadeIn direction="left" className="lg:col-span-2">
               <div className="space-y-4">
                 <ContactCard icon={Phone} title="Call Us" value="+250 788 000 000" sub="Mon - Fri, 8am - 5pm" />
+                <a
+                  href={`https://wa.me/${siteConfig.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <ContactCard
+                    icon={WhatsAppIcon}
+                    title="WhatsApp"
+                    value="+250 788 788 183"
+                    sub="Chat with us — we usually reply quickly"
+                  />
+                </a>
                 <ContactCard icon={Mail} title="Email Us" value="info@wisdominstruction.edu.rw" sub="We reply within 48 hours" />
                 <ContactCard icon={MapPin} title="Visit Us" value="Rubavu, Rwanda" sub="Find us in the heart of the community" />
                 <ContactCard icon={Clock} title="Office Hours" value="Mon - Fri: 8:00 AM - 5:00 PM" sub="Saturday: 9:00 AM - 1:00 PM" />
@@ -82,14 +97,17 @@ export default function ContactPage() {
                   <h3 className="mb-3 font-serif text-lg font-semibold">Connect With Us</h3>
                   <div className="flex gap-3">
                     {[
-                      { icon: Facebook, label: "Facebook", href: "#" },
-                      { icon: Instagram, label: "Instagram", href: "#" },
-                      { icon: Youtube, label: "YouTube", href: "#" },
-                      { icon: Twitter, label: "Twitter", href: "#" },
+                      { icon: Facebook, label: "Facebook", href: siteConfig.social.facebook },
+                      { icon: Instagram, label: "Instagram", href: siteConfig.social.instagram },
+                      { icon: Youtube, label: "YouTube", href: siteConfig.social.youtube },
+                      { icon: Twitter, label: "Twitter", href: siteConfig.social.twitter },
+                      { icon: WhatsAppIcon, label: "WhatsApp", href: siteConfig.social.whatsapp },
                     ].map(({ icon: Icon, label, href }) => (
                       <a
                         key={label}
                         href={href}
+                        target={href?.startsWith("http") ? "_blank" : undefined}
+                        rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
                         aria-label={label}
                         className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 transition-colors hover:bg-gold-500 hover:text-charcoal-dark"
                       >

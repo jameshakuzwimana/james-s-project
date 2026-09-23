@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MainNav } from "@/components/layout/main-nav";
 import { MainFooter } from "@/components/layout/main-footer";
 import { Toaster } from "@/components/ui/toast";
+import { WhatsAppButton } from "@/components/shared/whatsapp-button";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <main className="flex-1">{children}</main>
       <MainFooter />
       <Toaster />
+      <WhatsAppButton />
     </div>
   );
 }

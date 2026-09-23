@@ -201,10 +201,10 @@ function CultureCommunity() {
 
 function GalleryStrip() {
   const images = [
-    { src: "/images/school/students.svg", alt: "Students at Wisdom Instruction School" },
-    { src: "/images/school/activities.svg", alt: "School activities" },
-    { src: "/images/school/classroom.svg", alt: "Classroom learning" },
+    { src: "/images/photos/assembly.jpg", alt: "Morning assembly at Wisdom Instruction School" },
+    { src: "/images/photos/school-campus.jpg", alt: "School campus at Wisdom Instruction School" },
     { src: "/images/school/playground.svg", alt: "Outdoor play" },
+    { src: "/images/photos/road-to-school.jpg", alt: "Road to school" },
   ];
   return (
     <section className="bg-cream-dark py-20 md:py-28">

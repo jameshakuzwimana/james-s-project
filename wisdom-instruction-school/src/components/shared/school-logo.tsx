@@ -1,4 +1,4 @@
-import { GraduationCap, BookOpen, Sparkles } from "lucide-react";
+import { GraduationCap, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 

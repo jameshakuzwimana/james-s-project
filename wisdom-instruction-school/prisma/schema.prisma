@@ -35,6 +35,22 @@ enum GradeLevel {
   P6
 }
 
+enum AnnouncementPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum EventCategory {
+  ACADEMIC
+  SPORTS
+  CULTURAL
+  HOLIDAY
+  MEETING
+  OTHER
+}
+
 model User {
   id        String   @id @default(cuid())
   name      String
@@ -79,4 +95,88 @@ model Application {
   @@index([status])
   @@index([parentEmail])
   @@map("applications")
+}
+
+model Announcement {
+  id        String               @id @default(cuid())
+  title     String
+  content   String
+  priority  AnnouncementPriority @default(MEDIUM)
+  pinned    Boolean              @default(false)
+  published Boolean              @default(true)
+  category  String               @default("General")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([priority])
+  @@index([published])
+  @@map("announcements")
+}
+
+model NewsArticle {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String
+  content     String
+  category    String   @default("School News")
+  image       String?
+  author      String   @default("Wisdom Instruction School")
+  published   Boolean  @default(true)
+  publishedAt DateTime @default(now())
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([published, publishedAt])
+  @@map("news_articles")
+}
+
+model SchoolEvent {
+  id          String        @id @default(cuid())
+  title       String
+  description String
+  category    EventCategory @default(OTHER)
+  location    String?
+  image       String?
+  startDate   DateTime
+  endDate     DateTime?
+  published   Boolean       @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([startDate])
+  @@index([published])
+  @@map("school_events")
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  src       String
+  alt       String
+  category  String   @default("School")
+  sortOrder Int      @default(0)
+
+  createdAt DateTime @default(now())
+
+  @@index([category])
+  @@map("gallery_images")
+}
+
+model Teacher {
+  id        String   @id @default(cuid())
+  name      String
+  role      String
+  bio       String?
+  image     String?
+  sortOrder Int      @default(0)
+  published Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([published])
+  @@map("teachers")
 }

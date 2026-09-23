@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Twitter, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
 import SchoolLogo from "@/components/shared/school-logo";
+import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { siteConfig, footerLinks } from "@/config/site";
 
 export function MainFooter() {
@@ -16,14 +17,17 @@ export function MainFooter() {
             </p>
             <div className="mt-6 flex gap-3">
               {[
-                { icon: Facebook, label: "Facebook", href: "#" },
-                { icon: Instagram, label: "Instagram", href: "#" },
-                { icon: Youtube, label: "YouTube", href: "#" },
-                { icon: Twitter, label: "Twitter", href: "#" },
+                { icon: Facebook, label: "Facebook", href: siteConfig.social.facebook },
+                { icon: Instagram, label: "Instagram", href: siteConfig.social.instagram },
+                { icon: Youtube, label: "YouTube", href: siteConfig.social.youtube },
+                { icon: Twitter, label: "Twitter", href: siteConfig.social.twitter },
+                { icon: WhatsAppIcon, label: "WhatsApp", href: siteConfig.social.whatsapp },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
                   href={href}
+                  target={href?.startsWith("http") ? "_blank" : undefined}
+                  rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
                   aria-label={label}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-gold-500 hover:text-charcoal-dark"
                 >

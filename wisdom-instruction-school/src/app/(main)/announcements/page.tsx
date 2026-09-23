@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import AnnouncementsPage from "@/components/announcements/announcements-page";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Announcements",

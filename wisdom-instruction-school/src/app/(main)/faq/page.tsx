@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import FaqPage from "@/components/faq/faq-page";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "FAQ",

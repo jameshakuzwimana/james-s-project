@@ -138,7 +138,7 @@ function Requirements() {
           </FadeIn>
           <FadeIn direction="right" delay={0.1}>
             <div className="overflow-hidden rounded-3xl shadow-2xl">
-              <img src="/images/school/students.svg" alt="Students at Wisdom Instruction School" className="aspect-[4/3] w-full object-cover" />
+              <img src="/images/photos/road-to-school.jpg" alt="On your way to Wisdom Instruction School" className="aspect-[4/3] w-full object-cover" />
             </div>
           </FadeIn>
         </div>

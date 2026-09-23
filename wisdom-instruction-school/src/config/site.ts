@@ -8,12 +8,14 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
   email: "info@wisdominstruction.edu.rw",
   phone: "+250 788 000 000",
+  whatsapp: "250788788183",
   address: "Rubavu, Rwanda",
   social: {
     facebook: "#",
     twitter: "#",
     instagram: "#",
     youtube: "#",
+    whatsapp: "https://wa.me/250788788183",
   },
 };
 

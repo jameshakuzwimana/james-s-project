@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Play, Video, Clock, GraduationCap, Calendar } from "lucide-react";
+import { Play, Video } from "lucide-react";
 import FadeIn from "@/components/shared/fade-in";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { cn } from "@/lib/utils";
@@ -12,7 +12,7 @@ const videos = [
     title: "School Tour",
     description: "Take a guided tour of Wisdom Instruction School and see our campus, classrooms, and facilities.",
     category: "School Tour",
-    poster: "/images/school/school-building.svg",
+    poster: "/images/photos/tour-poster.jpg",
     videoUrl: "/videos/school-tour.mp4",
     featured: true,
   },

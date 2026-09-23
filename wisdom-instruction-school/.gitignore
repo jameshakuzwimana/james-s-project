@@ -43,3 +43,6 @@ next-env.d.ts
 # dev process files
 *.dev-pid
 *.dev-link-pid
+
+# embedded postgres data
+.pgdata/

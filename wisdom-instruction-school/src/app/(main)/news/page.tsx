@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import NewsPage from "@/components/news/news-page";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "News",

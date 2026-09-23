@@ -1,7 +1,7 @@
 // Centralized image paths for Wisdom Instruction School media.
-// Currently pointing at placeholder SVG images. When real school photos
-// are supplied, replace the placeholder files (keeping names) or update
-// these paths to the real .jpg/.png files.
+// Real school photos live under /images/photos/ (renamed from user-uploaded
+// files). SVG illustrations under /images/school/ remain as placeholders for
+// categories with no real photo yet.
 
 export const schoolImages = {
   hero: "/images/school/hero.svg",
@@ -19,7 +19,16 @@ export const schoolImages = {
   teacher4: "/images/school/teacher-4.svg",
 };
 
+// Real photographs supplied by the school.
+export const schoolPhotos = {
+  schoolBuilding: "/images/photos/school-building.jpg",
+  schoolCampus: "/images/photos/school-campus.jpg",
+  assembly: "/images/photos/assembly.jpg",
+  roadToSchool: "/images/photos/road-to-school.jpg",
+  tourPoster: "/images/photos/tour-poster.jpg",
+};
+
 export const schoolVideos = {
   tour: "/videos/school-tour.mp4",
-  tourPoster: "/images/school/school-building.svg",
+  tourPoster: schoolPhotos.tourPoster,
 };

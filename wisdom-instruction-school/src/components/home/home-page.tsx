@@ -57,7 +57,7 @@ function HeroSection() {
     <section className="relative overflow-hidden gradient-hero">
       <div className="absolute inset-0 opacity-20" aria-hidden="true">
         <img
-          src="/images/school/hero.svg"
+          src="/images/photos/school-campus.jpg"
           alt=""
           className="h-full w-full object-cover"
           loading="lazy"
@@ -608,12 +608,12 @@ function NewsSection() {
 
 function GalleryTeaser() {
   const images = [
-    { src: "/images/school/students.svg", alt: "Students at Wisdom Instruction School" },
-    { src: "/images/school/classroom.svg", alt: "Classroom at Wisdom Instruction School" },
-    { src: "/images/school/activities.svg", alt: "School activities" },
+    { src: "/images/photos/assembly.jpg", alt: "Students at Wisdom Instruction School" },
+    { src: "/images/photos/school-campus.jpg", alt: "School campus at Wisdom Instruction School" },
+    { src: "/images/photos/school-building.jpg", alt: "School building at Wisdom Instruction School" },
+    { src: "/images/photos/road-to-school.jpg", alt: "Road leading to Wisdom Instruction School" },
+    { src: "/images/photos/tour-poster.jpg", alt: "School tour at Wisdom Instruction School" },
     { src: "/images/school/nursery.svg", alt: "Nursery students" },
-    { src: "/images/school/playground.svg", alt: "School playground" },
-    { src: "/images/school/teacher-1.svg", alt: "Teacher and students" },
   ];
   return (
     <section className="bg-cream-dark py-20 md:py-28">
@@ -664,7 +664,7 @@ function TourSection() {
         <FadeIn delay={0.1}>
           <div className="relative overflow-hidden rounded-3xl shadow-2xl">
             <img
-              src="/images/school/school-building.svg"
+              src="/images/photos/tour-poster.jpg"
               alt="Wisdom Instruction School campus tour preview"
               className="aspect-video w-full object-cover"
               loading="lazy"

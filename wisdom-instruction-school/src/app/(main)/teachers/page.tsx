@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import TeachersPage from "@/components/teachers/teachers-page";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Teachers",

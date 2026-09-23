@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import AdmissionsPage from "@/components/admissions/admissions-page";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "Admissions",

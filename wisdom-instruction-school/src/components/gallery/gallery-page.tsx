@@ -8,12 +8,17 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 
 const galleryImages = [
+  { src: "/images/photos/school-campus.jpg", alt: "School campus at Wisdom Instruction School", category: "School" },
+  { src: "/images/photos/school-building.jpg", alt: "School building at Wisdom Instruction School", category: "School" },
+  { src: "/images/photos/assembly.jpg", alt: "Morning assembly at Wisdom Instruction School", category: "Activities" },
+  { src: "/images/photos/road-to-school.jpg", alt: "Road leading to Wisdom Instruction School", category: "School" },
+  { src: "/images/photos/tour-poster.jpg", alt: "School tour at Wisdom Instruction School", category: "School" },
   { src: "/images/school/students.svg", alt: "Students at Wisdom Instruction School", category: "Students" },
   { src: "/images/school/classroom.svg", alt: "Classroom at Wisdom Instruction School", category: "Classrooms" },
   { src: "/images/school/activities.svg", alt: "School activities", category: "Activities" },
   { src: "/images/school/nursery.svg", alt: "Nursery students", category: "Students" },
   { src: "/images/school/playground.svg", alt: "School playground", category: "Facilities" },
-  { src: "/images/school/school-building.svg", alt: "School building", category: "School" },
+  { src: "/images/school/school-building.svg", alt: "School building illustration", category: "School" },
   { src: "/images/school/computer-lab.svg", alt: "Computer laboratory", category: "Facilities" },
   { src: "/images/school/library.svg", alt: "School library", category: "Facilities" },
   { src: "/images/school/teacher-1.svg", alt: "Teacher at Wisdom Instruction School", category: "Teachers" },

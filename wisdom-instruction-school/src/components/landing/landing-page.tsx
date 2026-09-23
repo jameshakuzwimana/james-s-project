@@ -13,14 +13,11 @@ import {
   Lightbulb,
   Award,
   Menu,
-  X,
-  ChevronRight,
   Phone,
   Mail,
   MapPin,
   Play,
   Calendar,
-  Clock,
 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -35,12 +32,12 @@ export default function LandingPage({ onEnter }: LandingPageProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-cream text-charcoal">
+    <div id="top" className="min-h-screen scroll-smooth bg-cream text-charcoal">
       <LandingNav onEnter={onEnter} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <LandingHero onEnter={onEnter} />
       <LandingAbout />
-      <LandingCommunity onEnter={onEnter} />
-      <LandingTour onEnter={onEnter} />
+      <LandingCommunity />
+      <LandingTour />
       <LandingFooter onEnter={onEnter} />
     </div>
   );
@@ -61,12 +58,12 @@ function LandingNav({
         <SchoolLogo variant="light" />
         <nav className="hidden items-center gap-2 text-sm font-medium text-white lg:flex" aria-label="Main navigation">
           {[
-            { name: "Home", href: "/" },
+            { name: "Home", href: "#top" },
             { name: "About", href: "#about" },
             { name: "Academics", href: "#academics" },
-            { name: "Admissions", href: "#" },
-            { name: "Gallery", href: "#" },
-            { name: "Contact", href: "#" },
+            { name: "Admissions", href: "/admissions" },
+            { name: "Gallery", href: "/gallery" },
+            { name: "Contact", href: "/contact" },
           ].map((item) => (
             <a
               key={item.name}
@@ -109,12 +106,12 @@ function LandingNav({
           >
             <nav className="flex flex-col space-y-1 px-4 py-4" aria-label="Mobile navigation">
               {[
-                { name: "Home", href: "/" },
+                { name: "Home", href: "#top" },
                 { name: "About", href: "#about" },
                 { name: "Academics", href: "#academics" },
-                { name: "Admissions", href: "#" },
-                { name: "Gallery", href: "#" },
-                { name: "Contact", href: "#" },
+                { name: "Admissions", href: "/admissions" },
+                { name: "Gallery", href: "/gallery" },
+                { name: "Contact", href: "/contact" },
               ].map((item) => (
                 <a
                   key={item.name}
@@ -194,7 +191,7 @@ function LandingHero({ onEnter }: { onEnter?: () => void }) {
         >
           <div className="relative overflow-hidden rounded-3xl shadow-2xl">
             <img
-              src="/images/school/hero.svg"
+              src="/images/photos/school-campus.jpg"
               alt="Students learning at Wisdom Instruction School"
               className="aspect-[4/3] w-full object-cover"
               width={800}
@@ -270,7 +267,7 @@ function LandingAbout() {
   );
 }
 
-function LandingCommunity({ onEnter }: { onEnter?: () => void }) {
+function LandingCommunity() {
   return (
     <section className="gradient-primary py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -300,6 +297,13 @@ function LandingCommunity({ onEnter }: { onEnter?: () => void }) {
               <FeatureCard icon={Lightbulb} title="Creative Learning" />
               <FeatureCard icon={Shield} title="Safe Environment" />
             </div>
+            <Link
+              href="/school-life"
+              className="inline-flex items-center gap-2 rounded-full gradient-gold px-6 py-3 font-semibold text-charcoal-dark transition-transform hover:scale-105"
+            >
+              Discover School Life
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </motion.div>
 
           <motion.div
@@ -345,7 +349,7 @@ function LandingCommunity({ onEnter }: { onEnter?: () => void }) {
   );
 }
 
-function LandingTour({ onEnter }: { onEnter?: () => void }) {
+function LandingTour() {
   return (
     <section className="py-16 lg:py-24" id="tour">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -359,20 +363,20 @@ function LandingTour({ onEnter }: { onEnter?: () => void }) {
           >
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/images/school/school-building.svg"
+                src="/images/photos/tour-poster.jpg"
                 alt="Wisdom Instruction School building"
                 className="aspect-[4/3] w-full object-cover"
                 width={800}
                 height={600}
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/30" aria-hidden="true">
-                <button
-                  onClick={onEnter}
+                <Link
+                  href="/videos"
                   className="group flex h-20 w-20 items-center justify-center rounded-full bg-white/90 shadow-xl transition-transform hover:scale-110"
-                  aria-label="Watch school tour video"
+                  aria-label="Watch school tour videos"
                 >
                   <Play className="ml-1 h-8 w-8 text-primary" />
-                </button>
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -424,13 +428,13 @@ function LandingTour({ onEnter }: { onEnter?: () => void }) {
                 </div>
               </div>
             </div>
-            <button
-              onClick={onEnter}
+            <Link
+              href="/about"
               className="mt-4 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-white shadow-school transition-all hover:bg-primary-dark hover:scale-105"
             >
               Explore Our School
               <ArrowRight className="h-5 w-5" />
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>
@@ -463,10 +467,17 @@ function LandingFooter({ onEnter }: { onEnter?: () => void }) {
           <div>
             <h3 className="mb-4 font-semibold text-gold-400">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              {["About Us", "Academics", "Admissions", "School Life", "Gallery", "Contact"].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-gray-300 transition-colors hover:text-gold-400">
-                    {item}
+              {[
+                { name: "About Us", href: "/about" },
+                { name: "Academics", href: "/academics" },
+                { name: "Admissions", href: "/admissions" },
+                { name: "School Life", href: "/school-life" },
+                { name: "Gallery", href: "/gallery" },
+                { name: "Contact", href: "/contact" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <a href={item.href} className="text-gray-300 transition-colors hover:text-gold-400">
+                    {item.name}
                   </a>
                 </li>
               ))}

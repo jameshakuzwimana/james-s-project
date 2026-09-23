@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import SchoolLifePage from "@/components/school-life/school-life-page";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: "School Life",
